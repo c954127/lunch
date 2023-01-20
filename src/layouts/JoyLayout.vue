@@ -32,7 +32,7 @@
 </template>
 
 <script setup>
-    import { ref } from "vue";
+    import { ref } from 'vue';
     import { QLayout } from "quasar";
 
     const rightDrawerOpen = ref(false);
