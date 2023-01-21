@@ -5,6 +5,6 @@
 <script setup lang="ts"></script>
 <style lang="scss">
     * {
-      color:black
+      color:black;
     }
 </style>

@@ -1,16 +1,82 @@
 {
-  "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs": true,
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-  "editor.codeActionsOnSave": [
-    "source.fixAll.eslint"
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "gitlab-ci-validator.gitLabURL": "http://git.coreop.net",
+  "gitlab-ci-validator.ignoreCertificateErrors": true,
+  "prettier.vueIndentScriptAndStyle": false,
+  "prettier.enable": false,
+  "javascript.validate.enable": false,    // use eslint validate
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "vetur.validation.script": true,       // use eslint validate
+  "vetur.format.enable": true,
+  "vetur.validation.interpolation": true,
+  "vetur.experimental.templateInterpolationService": true,
+  "vetur.format.defaultFormatter.html": "none",
+  "vetur.format.defaultFormatter.css": "none",
+  "vetur.format.defaultFormatter.less": "none",
+  "vetur.format.defaultFormatter.postcss": "none",
+  "vetur.format.defaultFormatter.sass": "none",
+  "vetur.format.defaultFormatter.stylus": "none",
+  "vetur.format.defaultFormatter.ts": "none",
+  "vetur.format.defaultFormatter.js": "none",
+  "vetur.format.defaultFormatter.scss": "none",
+  "stylelint.autoFixOnSave": true,
+  "[scss]": {
+      "editor.formatOnSave": true,
+  },
+  "editor.codeActionsOnSave": {
+      "source.fixAll": true
+  },
+  "files.associations": {
+      ".env.*": "dotenv"
+  },
+  "files.eol": "\n",
+  "blueprint.templatesPath":[
+      ".vscode/templates"
+  ],
+  "cSpell.words": [
+      "bowser",
+      "Esports",
+      "Vvip",
+      "argb",
+      "betlist",
+      "camelcase",
+      "codegen",
+      "composables",
+      "exceljs",
+      "importmap",
+      "membermgmt",
+      "Mgmt",
+      "mixins",
+      "selago",
+      "sgaf",
+      "stylelint",
+      "systemjs",
+      "titansoft",
+      "unmount",
+      "vueuse",
+      "webroot",
+      "winloss"
+  ],
+  "eslint.probe": [
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
+      "html",
+      "vue",
+      "markdown",
+      "ts"
   ],
   "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "vue"
+      "javascript",
+      "typescript",
+      "vue"
   ],
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "postfix.languages": [
+      "javascript",
+      "typescript",
+      "vue",
+  ],
+  "volar.tsPlugin": true,
+  "git.ignoreLimitWarning": true
 }

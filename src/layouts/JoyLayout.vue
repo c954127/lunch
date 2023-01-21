@@ -1,8 +1,14 @@
 <script setup>
+    import { ref } from 'vue'
+
+    const menuOpen = ref(false);
+    const toggleMenu = () => {
+        menuOpen.value = !menuOpen.value;
+    }
 </script>
 <template>
     <q-layout view="hHh lpR fFf">
-        <q-header  style="background-color:#ffffff;filter: drop-shadow(0px 6px 6px rgba(155, 113, 0, 0.1));" height-hint="98">
+        <q-header v-if="!$q.screen.xs" class="desktop header" height-hint="98">
             <q-toolbar>
                 <img src="../assets/image/lunch-logo.png" class="logo">
                 <q-toolbar-title>
@@ -24,20 +30,41 @@
                 </q-btn>
             </q-toolbar>
         </q-header>
+        <q-header v-else class="mobile header">
+            <q-toolbar>
+                <q-btn dense flat round icon="menu" @click="toggleMenu" />
+                <img src="../assets/image/lunch-logo.png" class="mobile-logo">
+                <q-space></q-space>
+                <label class="balance q-mr-md">
+                    Balance: $350
+                </label>
+            </q-toolbar>
+        </q-header>
+        <q-drawer v-model="menuOpen" side="left" elevated>
+        </q-drawer>
         <q-page-container>
             <router-view />
         </q-page-container>
     </q-layout>
 </template>
 <style lang="scss">
+  .header {
+      background-color:#ffffff;
+      filter: drop-shadow(0px 6px 6px rgba(155, 113, 0, 0.1));
+  }
   .logo {
-    width: 78px;
-    margin:10px 20px;
+        width: 78px;
+        margin:10px 20px;
+  }
+  .mobile-logo {
+    width: 50px;
   }
   .balance {
-    font-size: 20px;
-    color:#644818
+      font-size: 20px;
+      color:#644818
   }
+
+
 </style>
 
 
