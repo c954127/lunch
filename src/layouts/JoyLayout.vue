@@ -1,42 +1,43 @@
-<template>
-  <q-layout view="hHh lpR fFf">
-
-    <q-header elevated class="bg-primary text-white" height-hint="98">
-      <q-toolbar>
-        <q-toolbar-title>
-          <q-avatar>
-            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg">
-          </q-avatar>
-          Title
-        </q-toolbar-title>
-
-        <q-btn dense flat round icon="menu" @click="toggleRightDrawer" />
-      </q-toolbar>
-
-      <q-tabs align="left">
-        <q-route-tab to="/page1" label="Page One" />
-        <q-route-tab to="/page2" label="Page Two" />
-        <q-route-tab to="/page3" label="Page Three" />
-      </q-tabs>
-    </q-header>
-
-    <q-drawer show-if-above v-model="rightDrawerOpen" side="right" elevated>
-      <!-- drawer content -->
-    </q-drawer>
-
-    <q-page-container>
-      <router-view />
-    </q-page-container>
-
-  </q-layout>
-</template>
-
 <script setup>
-    import { ref } from 'vue';
-    import { QLayout } from "quasar";
-
-    const rightDrawerOpen = ref(false);
-    const toggleRightDrawer = () => {
-        rightDrawerOpen.value = !rightDrawerOpen.value;
-    };
 </script>
+<template>
+    <q-layout view="hHh lpR fFf">
+        <q-header  style="background-color:#ffffff;filter: drop-shadow(0px 6px 6px rgba(155, 113, 0, 0.1));" height-hint="98">
+            <q-toolbar>
+                <img src="../assets/image/lunch-logo.png" class="logo">
+                <q-toolbar-title>
+                    <q-tabs indicator-color="orange" no-caps align="left">
+                        <q-route-tab  to="/home" label="Home" />
+                        <q-route-tab to="/meal" label="Meal" />
+                        <q-route-tab to="/explore" label="Explore" />
+                        <q-route-tab to="/wallet" label="Wallet" />
+                    </q-tabs>
+                </q-toolbar-title>
+                <label class="balance q-mr-md">
+                    Balance: $350
+                </label>
+                <q-btn   class="balance q-mr-md" flat round color="#32240C" icon="notifications" />
+                <q-btn round>
+                    <q-avatar size="48px">
+                        <img src="../assets/image/user.jpg">
+                    </q-avatar>
+                </q-btn>
+            </q-toolbar>
+        </q-header>
+        <q-page-container>
+            <router-view />
+        </q-page-container>
+    </q-layout>
+</template>
+<style lang="scss">
+  .logo {
+    width: 78px;
+    margin:10px 20px;
+  }
+  .balance {
+    font-size: 20px;
+    color:#644818
+  }
+</style>
+
+

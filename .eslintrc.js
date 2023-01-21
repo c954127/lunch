@@ -69,6 +69,11 @@ module.exports = {
   // add your custom rules here
   rules: {
 
+    'no-unused-expressions': 'off',
+
+    'vue/multi-word-component-names': 'off',
+    'vue/html-indent': ['error', 4],
+
     'prettier/prettier': 'off',
 
     'no-param-reassign': 'off',
