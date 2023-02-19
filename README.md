@@ -27,9 +27,7 @@ npm run lint
 ### Build the app for production
 ```bash
 quasar build
-
-and check-in built result it will deploy to production
-
+#and check-in built result it will deploy to production
 ```
 
 ### Customize the configuration
