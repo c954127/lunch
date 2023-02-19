@@ -1,0 +1,1 @@
+"use strict";(globalThis["webpackChunklunch"]=globalThis["webpackChunklunch"]||[]).push([[372],{9372:(l,n,u)=>{u.r(n),u.d(n,{default:()=>t});var a=u(9835);function e(l,n){return(0,a.wg)(),(0,a.iD)("h1",null," Wallet ")}var h=u(1639);const r={},c=(0,h.Z)(r,[["render",e]]),t=c}}]);
