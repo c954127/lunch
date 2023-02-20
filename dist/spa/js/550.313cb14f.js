@@ -1,0 +1,1 @@
+"use strict";(globalThis["webpackChunklunch"]=globalThis["webpackChunklunch"]||[]).push([[550],{9550:(l,n,u)=>{u.r(n),u.d(n,{default:()=>s});var a=u(9835);function e(l,n){return(0,a.wg)(),(0,a.iD)("h1",null," Meal ")}var h=u(1639);const r={},c=(0,h.Z)(r,[["render",e]]),s=c}}]);
